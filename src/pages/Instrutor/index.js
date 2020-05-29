@@ -219,7 +219,7 @@ export default function Instrutor() {
       });
   };
 
-  const handleDelete = async (id_instrutor) => {
+  const handleDelete = async (id_instrutor, nomeInstrutor) => {
     try {
       const response = await api.delete(`instrutor/${id_instrutor}`);
       if (
@@ -229,7 +229,7 @@ export default function Instrutor() {
       ) {
         getData(searchAttribute, searchText);
         Modal.destroyAll();
-        message.success(`O instrutor ${nome} foi excluído com sucesso!`);
+        message.success(`O instrutor ${nomeInstrutor} foi excluído com sucesso!`);
       }
     } catch (error) {
       if (error.response) message.error(error.response.data.error);
@@ -248,7 +248,7 @@ export default function Instrutor() {
       okType: "primary",
       cancelText: "Não",
       onOk() {
-        handleDelete(id_instrutor);
+        handleDelete(id_instrutor, nome);
       },
       onCancel() {
         Modal.destroyAll();

@@ -191,7 +191,7 @@ export default function Cliente() {
       });
   };
 
-  const handleDelete = async (id_cliente) => {
+  const handleDelete = async (id_cliente, nomeCliente) => {
     try {
       const response = await api.delete(`cliente/${id_cliente}`);
       if (
@@ -201,7 +201,7 @@ export default function Cliente() {
       ) {
         getData(searchAttribute, searchText);
         Modal.destroyAll();
-        message.success(`O cliente ${nome} foi excluído com sucesso!`);
+        message.success(`O cliente ${nomeCliente} foi excluído com sucesso!`);
       }
     } catch (error) {
       if (error.response) message.error(error.response.data.error);
@@ -220,7 +220,7 @@ export default function Cliente() {
       okType: "primary",
       cancelText: "Não",
       onOk() {
-        handleDelete(id_cliente);
+        handleDelete(id_cliente, nome);
       },
       onCancel() {
         Modal.destroyAll();

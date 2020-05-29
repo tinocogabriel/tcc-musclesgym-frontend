@@ -310,7 +310,7 @@ export default function Aula() {
       });
   };
 
-  const handleDelete = async (id_aula) => {
+  const handleDelete = async (id_aula, nomeAula) => {
     try {
       const response = await api.delete(`aula/${id_aula}`);
       if (
@@ -320,7 +320,7 @@ export default function Aula() {
       ) {
         getData(searchAttribute, searchText);
         Modal.destroyAll();
-        message.success(`A aula ${nome} foi excluída com sucesso!`);
+        message.success(`A aula ${nomeAula} foi excluída com sucesso!`);
       }
     } catch (error) {
       if (error.response) message.error(error.response.data.error);
@@ -339,7 +339,7 @@ export default function Aula() {
       okType: "primary",
       cancelText: "Não",
       onOk() {
-        handleDelete(id_aula);
+        handleDelete(id_aula,nome);
       },
       onCancel() {
         Modal.destroyAll();
