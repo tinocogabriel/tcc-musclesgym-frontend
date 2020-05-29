@@ -224,7 +224,7 @@ export default function Aula() {
               Modal.destroyAll();
               setLoadingInsert(false);
               setVisibleInsert(false);
-              message.success("Aula criada com sucesso!");
+              message.success(`A aula ${nome} foi cadastrada com sucesso!`);
             }
           } catch (error) {
             if (error.response) message.error(error.response.data.error);
@@ -290,7 +290,7 @@ export default function Aula() {
             });
             if (response.status === 200 || response.status === 201) {
               getData(searchAttribute, searchText);
-              message.success("Aula atualizada com sucesso!");
+              message.success(`Os dados da aula ${nome} foram atualizados com sucesso!`);
               Modal.destroyAll();
               setLoadingEdit(false);
               setVisibleEdit(false);
@@ -320,7 +320,7 @@ export default function Aula() {
       ) {
         getData(searchAttribute, searchText);
         Modal.destroyAll();
-        message.success("Aula excluída com sucesso!");
+        message.success(`A aula ${nome} foi excluída com sucesso!`);
       }
     } catch (error) {
       if (error.response) message.error(error.response.data.error);

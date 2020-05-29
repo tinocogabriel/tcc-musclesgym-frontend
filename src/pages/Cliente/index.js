@@ -139,7 +139,7 @@ export default function Cliente() {
             Modal.destroyAll();
             setLoadingInsert(false);
             setVisibleInsert(false);
-            message.success("Cliente criado com sucesso!");
+            message.success(`O cliente ${nome} foi cadastrado com sucesso!`);
           }
         } catch (error) {
           if (error.response) message.error(error.response.data.error);
@@ -172,7 +172,7 @@ export default function Cliente() {
           });
           if (response.status === 200 || response.status === 201) {
             getData(searchAttribute, searchText);
-            message.success("Cliente atualizado com sucesso!");
+            message.success(`Os dados do cliente ${nome} foram atualizados com sucesso!`);
             Modal.destroyAll();
             setLoadingEdit(false);
             setVisibleEdit(false);
@@ -201,7 +201,7 @@ export default function Cliente() {
       ) {
         getData(searchAttribute, searchText);
         Modal.destroyAll();
-        message.success("Cliente excluído com sucesso!");
+        message.success(`O cliente ${nome} foi excluído com sucesso!`);
       }
     } catch (error) {
       if (error.response) message.error(error.response.data.error);

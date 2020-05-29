@@ -166,7 +166,7 @@ export default function Instrutor() {
             Modal.destroyAll();
             setLoadingInsert(false);
             setVisibleInsert(false);
-            message.success("Instrutor criado com sucesso!");
+            message.success(`O instrutor ${nome} foi cadastrado com sucesso!`);
           }
         } catch (error) {
           if (error.response) message.error(error.response.data.error);
@@ -199,7 +199,7 @@ export default function Instrutor() {
           });
           if (response.status === 200 || response.status === 201) {
             getData(searchAttribute, searchText);
-            message.success("Instrutor atualizado com sucesso!");
+            message.success(`Os dados do instrutor ${nome} foram atualizados com sucesso!`);
             Modal.destroyAll();
             setLoadingEdit(false);
             setVisibleEdit(false);
@@ -229,7 +229,7 @@ export default function Instrutor() {
       ) {
         getData(searchAttribute, searchText);
         Modal.destroyAll();
-        message.success("Instrutor excluído com sucesso!");
+        message.success(`O instrutor ${nome} foi excluído com sucesso!`);
       }
     } catch (error) {
       if (error.response) message.error(error.response.data.error);
