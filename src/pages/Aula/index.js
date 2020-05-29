@@ -331,15 +331,15 @@ export default function Aula() {
     }
   };
 
-  const showDeleteConfirm = (id_aula, nome) => {
+  const showDeleteConfirm = (id_aula, nomeAula) => {
     Modal.confirm({
       title: "Excluir Aula",
-      content: `Tem certeza que deseja excluir a aula ${nome}`,
+      content: `Tem certeza que deseja excluir a aula ${nomeAula}`,
       okText: "Sim",
       okType: "primary",
       cancelText: "Não",
       onOk() {
-        handleDelete(id_aula,nome);
+        handleDelete(id_aula,nomeAula);
       },
       onCancel() {
         Modal.destroyAll();

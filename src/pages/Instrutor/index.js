@@ -240,15 +240,15 @@ export default function Instrutor() {
     }
   };
 
-  const showDeleteConfirm = (id_instrutor, nome) => {
+  const showDeleteConfirm = (id_instrutor, nomeInstrutor) => {
     Modal.confirm({
       title: "Excluir Instrutor",
-      content: `Tem certeza que deseja excluir o instrutor ${nome}`,
+      content: `Tem certeza que deseja excluir o instrutor ${nomeInstrutor}`,
       okText: "Sim",
       okType: "primary",
       cancelText: "Não",
       onOk() {
-        handleDelete(id_instrutor, nome);
+        handleDelete(id_instrutor, nomeInstrutor);
       },
       onCancel() {
         Modal.destroyAll();

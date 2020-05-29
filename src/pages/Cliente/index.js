@@ -212,15 +212,15 @@ export default function Cliente() {
     }
   };
 
-  const showDeleteConfirm = (id_cliente, nome) => {
+  const showDeleteConfirm = (id_cliente, nomeCliente) => {
     Modal.confirm({
       title: "Excluir Cliente",
-      content: `Tem certeza que deseja excluir o cliente ${nome}`,
+      content: `Tem certeza que deseja excluir o cliente ${nomeCliente}`,
       okText: "Sim",
       okType: "primary",
       cancelText: "Não",
       onOk() {
-        handleDelete(id_cliente, nome);
+        handleDelete(id_cliente, nomeCliente);
       },
       onCancel() {
         Modal.destroyAll();
