@@ -18,3 +18,12 @@
 .cliente-container .box .searchArea .searchText {
   width: 400px;
 }
+
+@media screen and (max-width:768px){
+  .cliente-container .box .searchArea .searchAttribute {
+    width: 75px;
+  }
+  .cliente-container .box .searchArea .searchText {
+    width:100%;
+  }
+}

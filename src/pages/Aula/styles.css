@@ -18,3 +18,12 @@
   .aula-container .box .searchArea .searchText {
     width: 400px;
   }
+
+  @media screen and (max-width:768px){
+    .aula-container .box .searchArea .searchAttribute {
+      width: 75px;
+    }
+    .aula-container .box .searchArea .searchText {
+      width:100%;
+    }
+  }

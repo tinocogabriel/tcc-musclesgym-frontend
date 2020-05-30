@@ -12,3 +12,23 @@
 .home-container .box h3 {
   opacity: 0.5;
 }
+
+@media screen and (max-width:768px){
+  .home-container .box h2{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .home-container .box h3{
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:426px){
+  .home-container .box h2{
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .home-container .box h3{
+    font-size: 12px;
+  }
+}

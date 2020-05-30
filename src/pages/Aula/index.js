@@ -73,7 +73,7 @@ export default function Aula() {
       title: "Nome da Aula",
       dataIndex: "nome",
       key: "nome",
-      width: 100,
+      width: 200,
     },
     {
       title: "Nome Instrutor",
@@ -84,6 +84,7 @@ export default function Aula() {
     {
       title: "Horário",
       key: "horario_inicio",
+      align:'center',
       width: 200,
       render: (text, record) => {
         return (
@@ -97,11 +98,13 @@ export default function Aula() {
     {
       title: "Número Sala",
       dataIndex: "numero_sala",
+      align:'center',
       key: "numero_sala",
-      width: 150,
+      width: 200,
     },
     {
-      title: "Horário",
+      title: "Dias Semana",
+      align:'center',
       key: "horario_inicio",
       width: 200,
       render: (text, record) => {
@@ -124,7 +127,8 @@ export default function Aula() {
     {
       title: "Editar",
       key: "editar",
-      width: 100,
+      align:'center',
+      width: 200,
       render: (text, record) => (
         <EditOutlined
           onClick={() => {
@@ -152,8 +156,9 @@ export default function Aula() {
     },
     {
       title: "Excluir",
+      align:'center',
       key: "excluir",
-      width: 100,
+      width: 200,
       render: (text, record) => (
         <DeleteOutlined
           onClick={() => {
@@ -408,7 +413,7 @@ export default function Aula() {
             </div>
             <Table
               size="small"
-              scroll={{ y: 300 }}
+              scroll={{ x: 1200 }}
               columns={columns}
               dataSource={aulas}
             />

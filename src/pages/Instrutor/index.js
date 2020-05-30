@@ -67,6 +67,7 @@ export default function Instrutor() {
       title: "Cód. Instrutor",
       dataIndex: "id_instrutor",
       key: "id_instrutor",
+      align:'center',
       width: 100,
     },
     {
@@ -79,17 +80,20 @@ export default function Instrutor() {
       title: "CPF",
       dataIndex: "cpf",
       key: "cpf",
+      align:'center',
       width: 150,
     },
     {
       title: "RG",
       dataIndex: "rg",
       key: "rg",
+      align:'center',
       width: 150,
     },
     {
       title: "Atividades",
       key: "atividades",
+      align:'center',
       width: 100,
       render: (text, record) => (
         <Tooltip
@@ -104,6 +108,7 @@ export default function Instrutor() {
     {
       title: "Editar",
       key: "editar",
+      align:'center',
       width: 100,
       render: (text, record) => (
         <EditOutlined
@@ -127,6 +132,7 @@ export default function Instrutor() {
     {
       title: "Excluir",
       key: "excluir",
+      align:'center',
       width: 100,
       render: (text, record) => (
         <DeleteOutlined

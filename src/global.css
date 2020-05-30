@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-.ant-table-header th{
+.ant-table-header th,
+.ant-table-thead th{
   background:#1890ff !important;
   color:#fff !important;
 }

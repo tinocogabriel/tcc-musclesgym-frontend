@@ -40,3 +40,21 @@
   font-size: 32px;
   margin-bottom: 32px;
 }
+
+@media screen and (max-width: 768px) {
+  .logon-container .box {
+    width: 75%;
+    text-align: center;
+  }
+
+  .logon-container .box img:nth-child(2) {
+    display: none;
+  }
+   
+  .logon-container .box .form span{
+    text-align: left;
+  }
+  .logon-container section.form {
+    margin: 0;
+  }
+}

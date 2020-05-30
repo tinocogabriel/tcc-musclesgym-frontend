@@ -18,3 +18,12 @@
 .instrutor-container .box .searchArea .searchText {
   width: 400px;
 }
+
+@media screen and (max-width:768px){
+  .instrutor-container .box .searchArea .searchAttribute {
+    width: 75px;
+  }
+  .instrutor-container .box .searchArea .searchText {
+    width:100%;
+  }
+}

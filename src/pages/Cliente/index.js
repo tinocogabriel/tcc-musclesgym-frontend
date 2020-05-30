@@ -47,6 +47,7 @@ export default function Cliente() {
     {
       title: "Matrícula",
       dataIndex: "id_cliente",
+      align: "center",
       key: "id_cliente",
       width: 100,
     },
@@ -65,6 +66,7 @@ export default function Cliente() {
     {
       title: "CPF",
       dataIndex: "cpf",
+      align: "center",
       key: "cpf",
       width: 150,
     },
@@ -72,11 +74,13 @@ export default function Cliente() {
       title: "RG",
       dataIndex: "rg",
       key: "rg",
+      align: "center",
       width: 150,
     },
     {
       title: "Editar",
       key: "editar",
+      align: "center",
       width: 100,
       render: (text, record) => (
         <EditOutlined
@@ -90,8 +94,8 @@ export default function Cliente() {
             setSenha(record.acesso.senha);
             setTimeout(() => {
               setVisibleEdit(true);
-              formEdit.resetFields(); 
-              formEdit.setFieldsValue(); 
+              formEdit.resetFields();
+              formEdit.setFieldsValue();
             }, 250);
           }}
         />
@@ -100,6 +104,7 @@ export default function Cliente() {
     {
       title: "Excluir",
       key: "excluir",
+      align: "center",
       width: 100,
       render: (text, record) => (
         <DeleteOutlined
@@ -172,7 +177,9 @@ export default function Cliente() {
           });
           if (response.status === 200 || response.status === 201) {
             getData(searchAttribute, searchText);
-            message.success(`Os dados do cliente ${nome} foram atualizados com sucesso!`);
+            message.success(
+              `Os dados do cliente ${nome} foram atualizados com sucesso!`
+            );
             Modal.destroyAll();
             setLoadingEdit(false);
             setVisibleEdit(false);
